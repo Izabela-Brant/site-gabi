@@ -12,7 +12,7 @@ export const style = {
     container:{
         display: 'flex',
         flexDirection: 'row',
-        height: 500,
+        height: 530,
         justifyContent: 'space-around'
     }
 }

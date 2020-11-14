@@ -3,7 +3,7 @@ import React from "react";
 const  windowWidth = window.innerWidth;
 export const styles = {
     container:{
-        height: 500,
+        height: 560,
         paddingLeft: 15,
         paddingRight: 15,
         display: 'flex',

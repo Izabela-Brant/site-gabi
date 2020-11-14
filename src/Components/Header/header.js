@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function Header(props) {
+export default function Cabecalho(props) {
     const classes = useStyles();
     const [open, setOpen] = useState(false);
 
@@ -55,7 +55,7 @@ export default function Header(props) {
         <div className={classes.root}>
             <CssBaseline/>
             <ElevationScroll {...props}>
-                <AppBar style={{backgroundColor: 'black'}} position="static">
+                <AppBar style={{backgroundColor: 'black'}} position="fixed">
                     <Toolbar>
                         <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                             <MenuIcon onClick={handleMenu}/>

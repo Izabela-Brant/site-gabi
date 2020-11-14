@@ -11,12 +11,15 @@ export const style = {
     },
     secaoBlog:{
         // height: '100%',
-        backgroundColor: 'gray'
+        // backgroundColor: 'gray'
     },
     secaoPortfolio:{
-        backgroundColor: 'white'
+        // backgroundColor: 'white'
     },
     secaoSobreMim:{
         backgroundColor: 'gray'
+    },
+    secaoContato:{
+        backgroundColor: 'red'
     }
 }

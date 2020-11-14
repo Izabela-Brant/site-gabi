@@ -1,6 +1,6 @@
 export const styles = {
     container:{
-        height: 550,
+        height: 560,
         paddingLeft: 15,
         paddingRight: 15,
         backgroundColor: 'red'

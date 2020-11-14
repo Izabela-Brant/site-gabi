@@ -1,13 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import Home from "./Pages/Home/home";
-import Header from "./Components/Header/header";
+import Cabecalho from "./Components/Header/header";
+import Rodape from "./Components/Rodape/rodape"
 
 function App() {
 return (
     <div>
-        <Header/>
+        <Cabecalho/>
         <Home/>
+        <Rodape/>
     </div>
 );
 }
