@@ -22,6 +22,8 @@ export const styles = {
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        overflowX: 'scroll'
+        overflowX: 'scroll',
+        // scrollbarWidth: '0%',
+        // scrollbarColor: 'black'
     }
 }

@@ -18,7 +18,7 @@ export default function Routes(){
             <Switch>
                 <Fragment>
                     <Header/>
-                    <div>
+
                         <Route path="/" exact component={Home} />
                         <Route path="/blog" exact component={Blog} />
                         <Route path="/portfolio" exact component={Portfolio} />
@@ -28,7 +28,7 @@ export default function Routes(){
                         <Route path="/blog/publicacao" component={Publicacao} />
                         <Route path="/portfolio/categoria" component={Categoria} />
                         <Route path="/editoriais/editorial" component={Editorial}/>
-                    </div>
+
                         <Rodape/>
                 </Fragment>
             </Switch>

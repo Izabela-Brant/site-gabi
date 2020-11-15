@@ -25,9 +25,9 @@ import logoPrincipal from "../../Images/Logo/logo-principal-header.jpeg"
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        flexGrow: 1,
-        backgroundColor: 'black',
-        color: 'black'
+        // flexGrow: 1,
+        color: 'black',
+
     },
     menuButton: {
         marginRight: theme.spacing(2),
@@ -93,7 +93,7 @@ export default function Cabecalho(props) {
         <div className={classes.root}>
             <CssBaseline/>
             <ElevationScroll {...props}>
-                <AppBar style={{backgroundColor: 'black', justifyContent: 'space-around'}} position="fixed">
+                <AppBar style={{backgroundColor: 'black'}} position="fixed">
                     <Toolbar>
                         <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                             <MenuIcon onClick={handleMenu}/>
