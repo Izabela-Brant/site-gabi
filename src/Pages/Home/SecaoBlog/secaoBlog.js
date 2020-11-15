@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SecaoBlog(props)
 {
-    var items = [
+    const items = [
         {
             name: "Random Name #1",
             description: "Probably the most random thing you have ever seen!"
@@ -26,7 +26,7 @@ export default function SecaoBlog(props)
     ]
 
     return (
-        <Carousel >
+        <Carousel interval={6000}>
             {
                 items.map( (item, i) => <Item key={i} item={item} /> )
             }
@@ -39,12 +39,13 @@ function Item(props)
     // const classes = useStyles();
     return (
         <div style={style.container}>
-            <div>
+            <div style={style.textContainer}>
                 <h1>{props.item.name}</h1>
                 <p>{props.item.description}</p>
+                <Button style={{width: 100, backgroundColor: 'pink', marginTop: 10}}>Leia Mais!</Button>
             </div>
 
-                <img src={imagemBlog} height={500} alt="Imagem"/>
+            <img src={imagemBlog} height={500} alt="Imagem" style={{padding: 15}}/>
 
 
 

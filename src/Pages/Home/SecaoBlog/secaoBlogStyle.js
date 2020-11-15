@@ -13,6 +13,15 @@ export const style = {
         display: 'flex',
         flexDirection: 'row',
         height: 530,
-        justifyContent: 'space-around'
-    }
+        justifyContent: 'space-between',
+        alignItems: 'flex-end',
+    },
+    textContainer:{
+        display:'flex',
+        justifyContent: 'flex-end',
+        height: '100%',
+        flexDirection: 'column',
+        padding: 20
+    },
+
 }

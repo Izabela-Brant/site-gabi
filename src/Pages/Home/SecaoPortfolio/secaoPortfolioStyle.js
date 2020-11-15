@@ -1,9 +1,9 @@
 export const styles = {
     container:{
         height: 560,
-        paddingLeft: 15,
-        paddingRight: 15,
-        backgroundColor: 'red'
+        paddingLeft: 20,
+        paddingRight: 20,
+        backgroundColor: 'black'
     },
     header:{
         height: 70,
@@ -14,11 +14,14 @@ export const styles = {
         marginBottom: 5
     },
     titulo:{
-      fontSize: 40
+      fontSize: 40,
+        color: 'white'
+
     },
     cardContainer:{
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'space-around'
+        justifyContent: 'space-between',
+        overflowX: 'scroll'
     }
 }

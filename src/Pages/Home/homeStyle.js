@@ -17,9 +17,9 @@ export const style = {
         // backgroundColor: 'white'
     },
     secaoSobreMim:{
-        backgroundColor: 'gray'
+        // backgroundColor: 'gray'
     },
     secaoContato:{
-        backgroundColor: 'red'
+        // backgroundColor: 'red'
     }
 }

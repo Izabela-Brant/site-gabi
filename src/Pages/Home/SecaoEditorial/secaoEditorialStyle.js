@@ -12,11 +12,12 @@ export const style = {
     },
     container:{
         height: 500,
+        marginTop: -95
     },
     text:{
-        backgroundColor: 'transparent',
+        backgroundColor: 'rgba(255,255,255,0.2)',
         position: 'relative',
         top: 400,
-        paddingLeft: 15,
+        paddingLeft: 20,
     }
 }

@@ -19,7 +19,7 @@ export default function SecaoEditorial(props)
     ];
 
     return (
-        <Carousel autoPlay={false}>
+        <Carousel interval={6000}>
             {
                 items.map( (item, i) => <Item key={i} item={item} /> )
             }
@@ -33,7 +33,7 @@ function Item(props)
         <div style={style.container}>
             <div style={style.text}>
                 <h1>{props.item.name}</h1>
-                <Button>
+                <Button style={{backgroundColor: 'white'}}>
                     Veja o editorial completo!
                 </Button>
             </div>
@@ -43,7 +43,7 @@ function Item(props)
                 height={500}
                 width='100%'
                 alt="Imagem"
-                style={{marginTop: -95}}
+                // style={{marginTop: -95}}
             />
         </div>
     )

@@ -4,13 +4,13 @@ const  windowWidth = window.innerWidth;
 export const styles = {
     container:{
         height: 560,
-        paddingLeft: 15,
-        paddingRight: 15,
+        paddingLeft: 20,
+        paddingRight: 20,
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
-        marginRight: 20,
-        marginLeft: 20,
+        // marginRight: 20,
+        // marginLeft: 20,
         justifyContent: 'space-between'
     },
     titulo:{

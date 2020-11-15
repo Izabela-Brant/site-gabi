@@ -5,6 +5,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import {useHistory} from 'react-router-dom'
+
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import PropTypes from 'prop-types';
 
@@ -19,6 +21,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import CssBaseline from "@material-ui/core/CssBaseline";
+import logoPrincipal from "../../Images/Logo/logo-principal-header.jpeg"
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -31,17 +34,52 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         // flexGrow: 1,
-        justifySelf: 'center'
+        justifyContent: 'center',
+        backgroundColor: 'red'
     },
     drawer: {
         width: 240,
         flexShrink: 0,
     },
+    logo: {
+        margin: "auto",
+        textAlign: "center",
+        // maxWidth: "50%",
+        // maxHeight: "70%"
+    },
+    logoHorizontallyCenter: {
+        position: "absolute",
+        left: "50%",
+        top: "50%",
+        transform: "translate(-50%, -50%)"
+    }
 }));
 
 export default function Cabecalho(props) {
+    const itensMenu = [
+        {
+            nome: 'Início',
+            rota: '/',
+        },{
+            nome: 'Blog',
+            rota: '/blog',
+        }, {
+            nome: 'Portfólio',
+            rota: '/portfolio'
+        }, {
+            nome: 'Editorial Fotográfico',
+            rota: '/editoriais'
+        }, {
+            nome: 'Sobre mim',
+            rota: '/sobre-mim',
+        }, {
+            nome: 'Contato',
+            rota: ''
+        }
+    ]
     const classes = useStyles();
     const [open, setOpen] = useState(false);
+    const history = useHistory();
 
     const handleMenu = () => {
         setOpen(true);
@@ -55,14 +93,13 @@ export default function Cabecalho(props) {
         <div className={classes.root}>
             <CssBaseline/>
             <ElevationScroll {...props}>
-                <AppBar style={{backgroundColor: 'black'}} position="fixed">
+                <AppBar style={{backgroundColor: 'black', justifyContent: 'space-around'}} position="fixed">
                     <Toolbar>
                         <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                             <MenuIcon onClick={handleMenu}/>
                         </IconButton>
-                        <Typography variant="h6" className={classes.title}>
-                            Site
-                        </Typography>
+                        <div className={classes.logoHorizontallyCenter}>
+                            <img src={logoPrincipal} height={50} className={classes.logo}/>                        </div>
 
                         <div>
                             {/*<IconButton*/}
@@ -80,10 +117,18 @@ export default function Cabecalho(props) {
                                 onClose={handleClose}
                                 className={classes.drawer}
                             >
+                                <Toolbar>
+
+                                </Toolbar>
                                 {<List>
-                                    {['Blog', 'Portfólio', 'Editorial Fotográfico', 'Sobre mim', 'Contato'].map((text, index) => (
-                                        <ListItem button key={text}>
-                                            <ListItemText primary={text} />
+                                    {itensMenu.map((item, index) => (
+                                        <ListItem button key={item.nome} onClick={()=>{
+                                            history.push({
+                                                pathname: item.rota,
+                                            });
+                                            handleClose()
+                                        }}>
+                                            <ListItemText primary={item.nome} />
                                         </ListItem>
                                     ))}
                                 </List>}
