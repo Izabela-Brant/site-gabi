@@ -21,7 +21,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import CssBaseline from "@material-ui/core/CssBaseline";
-import logoPrincipal from "../../Images/Logo/logo-principal-header.jpeg"
+import logoPrincipal from "../../Images/Logo/logo-principal-header.png"
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -99,7 +99,7 @@ export default function Cabecalho(props) {
                             <MenuIcon onClick={handleMenu}/>
                         </IconButton>
                         <div className={classes.logoHorizontallyCenter}>
-                            <img src={logoPrincipal} height={50} className={classes.logo}/>                        </div>
+                            <img src={logoPrincipal} height={130} className={classes.logo}/>                        </div>
 
                         <div>
                             {/*<IconButton*/}

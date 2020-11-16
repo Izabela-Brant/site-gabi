@@ -18,7 +18,7 @@
 // import MenuItem from '@material-ui/core/MenuItem';
 // import Menu from '@material-ui/core/Menu';
 // import CssBaseline from "@material-ui/core/CssBaseline";
-import logo from '../../Images/Logo/logo-principal.jpeg'
+import logo from '../../Images/Logo/logo-principal-header.png'
 // const  windowHeight = window.innerHeight;
 //
 // const useStyles = makeStyles((theme) => ({
@@ -116,7 +116,7 @@ export default function StickyFooter() {
             <Container maxWidth="sm">
                 <Toolbar>
                     {/*<IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">*/}
-                        <img src={logo} height={100} alt="Logo" className={classes.menuButton}/>
+                        <img src={logo} height={200} alt="Logo" className={classes.menuButton}/>
                     {/*</IconButton>*/}
                 </Toolbar>
             </Container>
